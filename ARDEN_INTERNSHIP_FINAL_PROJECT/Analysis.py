@@ -5,12 +5,13 @@ import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
+import os
 
 st.set_page_config(page_title="Netflix Data Analysis", layout="wide")
 # Load the dataset
 st.title("Netflix Data Analysis")
 def load_data():
-    df = pd.read_csv("netflix1.csv")
+    df = df = pd.read_csv(os.path.join(os.path.dirname(ARDEN_INTERNSHIP_FINAL_PROJECT), "netflix1.csv"))
     return df
 df = load_data()
 
