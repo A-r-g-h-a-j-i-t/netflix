@@ -11,7 +11,10 @@ st.set_page_config(page_title="Netflix Data Analysis", layout="wide")
 # Load the dataset
 st.title("Netflix Data Analysis")
 def load_data():
-    df = df = pd.read_csv(os.path.join(os.path.dirname(ARDEN_INTERNSHIP_FINAL_PROJECT), "netflix1.csv"))
+    current_dir = os.path.dirname(__file__)
+    file_path = os.path.join(current_dir, "netflix1.csv")
+    df = pd.read_csv(file_path)
+    return df
     return df
 df = load_data()
 
